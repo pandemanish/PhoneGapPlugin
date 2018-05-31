@@ -1,12 +1,12 @@
-repositories{    
+repositories{
   jcenter()
-  flatDir{
-      dirs 'aar'
-   }
+  maven {
+      url = "https://github.com/Marketo/android-sdk/raw/preprod/"
+  }
 }
 
 dependencies {
-   compile(name:'MarketoRelease', ext:'aar')
+  implementation 'com.marketo:MarketoSDK:0.7.7'
 }
 
 android {
